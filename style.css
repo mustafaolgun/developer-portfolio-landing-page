@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", serif;
+  font-size: 1.3rem;
+  background-color: #f5ecd5;
+}
+
+header {
+  font-family: "DM Serif Display", serif;
+  padding: 70px 16px;
+}
+
+.navbar {
+  background-color: #578e7e;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.active {
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: scale(1.2);
+}
+
+.logo {
+  font-size: 2rem;
+  color: #f5ecd5;
+}
+
+.nav-links {
+  height: 70%;
+  font-size: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.hamburger {
+  font-size: 2rem;
+}
+
+.hamburger.active {
+  display: none;
+}
+
+a {
+  color: #f5ecd5;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #578e7e;
+}
+
+.hero p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #3d3d3d;
+}
+
+.hero .hero-desc {
+  font-weight: 400;
+  color: #f5ecd5;
+  background-color: #578e7e;
+  padding: 8px 16px;
+  border-radius: 32px;
+  margin-bottom: 16px;
+}
+
+.about {
+  padding: 16px 0px;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+}
+
+.about-side {
+  padding: 0 16px;
+}
+
+.about h2 {
+  font-size: 1.3rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #578e7e;
+  text-align: start;
+}
+
+.about h3 {
+  font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  text-align: start;
+  color: #578e7e;
+}
+
+.about .about-desc {
+  margin: 8px 0;
+  text-align: start;
+  color: #3d3d3d;
+  font-weight: 700;
+}
+
+.about-bottom-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: start;
+}
+
+.icons,
+.stats {
+  width: 150px;
+  padding: 8px 16px;
+}
+
+.icons ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.icons ul li {
+  margin-bottom: 12px;
+}
+
+.icons ul li a {
+  color: #578e7e;
+  font-weight: 700;
+}
+
+.icons i {
+  font-size: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #578e7e;
+  font-weight: 700;
+}
+
+.year-count {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 4px;
+  background-color: #578e7e;
+  color: #f5ecd5;
+  border-radius: 50%;
+}
+
+.projects {
+  padding: 16px;
+}
+
+.projects h2 {
+  font-size: 1.3rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #578e7e;
+  text-align: start;
+}
+
+.projects h3 {
+  font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #578e7e;
+  text-align: start;
+  margin-bottom: 16px;
+}
+
+.project-box {
+  box-shadow: 0px 0px 16px 0px #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+}
+
+.project-box p {
+  font-weight: 400;
+  color: #3d3d3d;
+  margin: 0px 8px 16px;
+}
+
+figure figcaption {
+  align-self: flex-start;
+  font-weight: 700;
+  color: #3d3d3d;
+  margin: 8px;
+}
+
+.projects .technologies {
+  font-weight: 700;
+  color: #3d3d3d;
+  text-decoration: underline;
+  margin: 4px 8px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+}
+
+.projects button {
+  background-color: #578e7e;
+  color: #f5ecd5;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.3rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: 0.3s;
+}
+
+.projects button:hover {
+  transform: scale(1.1);
+}
+
+.contact {
+  padding: 16px;
+  margin: 16px 0px;
+}
+
+.contact h2 {
+  font-size: 1.3rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #578e7e;
+}
+
+.contact h3 {
+  font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #578e7e;
+}
+
+.contact img {
+  width: 100%;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form label {
+  font-size: 1.3rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+form input {
+  width: 60%;
+  padding: 8px 16px;
+  margin: 8px 0;
+  border: solid 1px #578e7e;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  outline: none;
+}
+
+form textarea {
+  width: 60%;
+  padding: 8px 16px;
+  margin: 8px 0;
+  border: solid 1px #578e7e;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  outline: none;
+}
+
+form button {
+  width: 60%;
+  background-color: #578e7e;
+  color: #f5ecd5;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 16px 0px;
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  background-color: #578e7e;
+  color: #f5ecd5;
+}
+
+@media screen and (min-width: 768px) {
+  .about img {
+    height: 40vh;
+    object-fit: cover;
+  }
+
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .projects-header {
+    width: 100%;
+  }
+
+  .project-box {
+    width: 45%;
+    min-height: 400px;
+  }
+
+  .project-box img {
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  .load-more {
+    width: 100%;
+  }
+
+  .contact img {
+    height: 40vh;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-links li {
+    margin: 0 16px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .about article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about-img {
+    width: 50%;
+    padding: 0 16px;
+  }
+
+  .about-side {
+    width: 50%;
+  }
+
+  .project-box {
+    width: 30%;
+  }
+}
