@@ -2,6 +2,8 @@
 
 This project is a **Web Developer Portfolio** page built using HTML, CSS, and JavaScript. The page is designed to help a web developer showcase their skills and projects.
 
+Live Site Github Pages Link : https://mustafaolgun.github.io/developer-portfolio-landing-page/
+
 ## Project Overview
 
 This portfolio page provides a basic structure with the following features:
